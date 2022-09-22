@@ -14,30 +14,30 @@ Gateway: 192.168.10.1
 #### 2. Setup protocol
 ```shell
 a) sudo nano /etc/hosts:
-* 192.168.10.2 master
-* 192.168.10.3 slave
++ 192.168.10.2 master
++ 192.168.10.3 slave
 b) setup server: sudo apt-get install nfs-server
 c) create workspace mirror
-* sudo mkdir /mirror
-* echo "/mirror *(rw,sync)" | sudo tee -a /etc/exports
-* sudo service nfs-kernel-server restart
-* sudo touch /mirror/sampleFileForMySlaves
++ sudo mkdir /mirror
++ echo "/mirror *(rw,sync)" | sudo tee -a /etc/exports
++ sudo service nfs-kernel-server restart
++ sudo touch /mirror/sampleFileForMySlaves
 ```
 
 #### 3. Setup MPI 
 ```shell
-* sudo apt-get install openssh-server
-* sudo adduser --home /mirror --uid 1100 mpi
-* su - mpi
-* ssh-keygen -t rsa
-* cd .ssh & cat id_rsa.pub >> authorized_keys
++ sudo apt-get install openssh-server
++ sudo adduser --home /mirror --uid 1100 mpi
++ su - mpi
++ ssh-keygen -t rsa
++ cd .ssh & cat id_rsa.pub >> authorized_keys
 ```
 
 #### 4. Install other package
 ```shell
-* build-in other terminal
-* sudo apt-get install build-essential
-* sudo apt-get install mpich
++ build-in other terminal
++ sudo apt-get install build-essential
++ sudo apt-get install mpich
 ```
 
 #### 5. Copy file and nano port
