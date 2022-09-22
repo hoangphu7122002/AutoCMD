@@ -7,5 +7,7 @@ Bridge Adapter
 #Adapter2:
 NAT
 #IPV4
-![image info](.//image//Screenshot 2022-09-22 205732.png)
+<p align="left">
+  <img width="600" height="400" src="image/Screenshot 2022-09-22 205732.png">
+</p>
 ```
